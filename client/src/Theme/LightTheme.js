@@ -1,0 +1,15 @@
+export const lightTheme = {
+  primary_0: "#ff4c3b",
+  primary_1: "#007bff",
+  warning: "#ffa200",
+  primary_dark: "#021840",
+  success: "#7ee768",
+  bg_light_0: "#f9f9f9",
+  bg_light_1: "#f3f3f3",
+  bg_light_2: "#efefef",
+  bg_dark_0: "#212331",
+  bg_dark_1: "#222222",
+  secondary_0: "#fdf791",
+  secondary_1: "#ffc0cb",
+  secondary_2: "#57d7f7",
+};
