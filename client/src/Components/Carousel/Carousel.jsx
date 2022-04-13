@@ -1,27 +1,27 @@
-import React, { useState } from "react";
-import styled from "styled-components";
-import { lightTheme } from "../../Theme/LightTheme";
-import { AiOutlineLeft, AiOutlineRight } from "react-icons/ai";
+import React, { useState } from 'react';
+import styled from 'styled-components';
+import { lightTheme } from '../../Theme/LightTheme';
+import { AiOutlineLeft, AiOutlineRight } from 'react-icons/ai';
 
 const Data = [
   {
-    title: "MEN FASHION",
-    src: "/images/model5.png",
+    title: 'MEN FASHION',
+    src: '/images/model5.png',
     color: `${lightTheme.main}`,
   },
   {
-    title: "WOMEN FASHION",
-    src: "/images/model4.png",
+    title: 'WOMEN FASHION',
+    src: '/images/model4.png',
     color: `${lightTheme.green}`,
   },
   {
-    title: "WINTER SALES",
-    src: "/images/model1.png",
+    title: 'WINTER SALES',
+    src: '/images/model1.png',
     color: `${lightTheme.indigo}`,
   },
   {
-    title: "SUMMER SALES",
-    src: "/images/model3.png",
+    title: 'SUMMER SALES',
+    src: '/images/model3.png',
     color: `${lightTheme.blue}`,
   },
 ];
@@ -33,7 +33,7 @@ function Carousel() {
   };
   return (
     <Container>
-      <Arrow className="arrow" direction="left" onClick={() => handleSlide(-1)}>
+      <Arrow className='arrow' direction='left' onClick={() => handleSlide(-1)}>
         <AiOutlineLeft size={24} />
       </Arrow>
       <ContentWrapper index={index}>
@@ -52,7 +52,7 @@ function Carousel() {
           );
         })}
       </ContentWrapper>
-      <Arrow className="arrow" direction="right" onClick={() => handleSlide(1)}>
+      <Arrow className='arrow' direction='right' onClick={() => handleSlide(1)}>
         <AiOutlineRight size={24} />
       </Arrow>
       <Dots>
@@ -66,7 +66,7 @@ function Carousel() {
 
 const Container = styled.div`
   width: 100vw;
-  height: 100vh;
+  height: calc(100vh - 5rem);
   max-width: 100%;
   display: flex;
   background-color: ${lightTheme.light};
@@ -98,10 +98,10 @@ const Arrow = styled.div`
   top: 0;
   bottom: 0;
   cursor: pointer;
-  left: ${(props) => props.direction === "left" && "10px"};
-  right: ${(props) => props.direction === "right" && "10px"};
+  left: ${(props) => props.direction === 'left' && '10px'};
+  right: ${(props) => props.direction === 'right' && '10px'};
   transform: translateX(
-    ${(props) => (props.direction === "left" ? "-80px" : "80px")}
+    ${(props) => (props.direction === 'left' ? '-80px' : '80px')}
   );
   margin: auto;
   transition: all 0.3s ease-in-out;
@@ -117,14 +117,14 @@ const Content = styled.div`
   box-sizing: border-box;
   position: relative;
   &:before {
-    content: " ";
+    content: ' ';
     display: block;
     position: absolute;
     left: 0;
     top: 0;
     width: 100%;
     height: 100%;
-    background-image: url("/images/bg1.jpg");
+    background-image: url('/images/bg1.jpg');
     background-position: 0% 80%;
     background-repeat: no-repeat;
     background-size: cover;
@@ -151,7 +151,7 @@ const ImgContainer = styled.div`
   isolation: isolate;
   &::before {
     position: absolute;
-    content: "";
+    content: '';
     top: 0;
     left: 0;
     transform: translate(10%, 30%);
@@ -188,7 +188,7 @@ const Button = styled.button`
   user-select: none;
   overflow: hidden;
   &::before {
-    content: "";
+    content: '';
     position: absolute;
     transition: inherit;
     inset: 0;
@@ -222,10 +222,10 @@ const Dot = styled.span`
   width: 10px;
   height: 10px;
   border-radius: 50%;
-  opacity: ${(props) => (props.active ? "1" : "0.5")};
+  opacity: ${(props) => (props.active ? '1' : '0.5')};
   margin-right: 8px;
   background-color: ${(props) => props.color};
-  transform: scale(${(props) => (props.active ? "1.4" : "1")});
+  transform: scale(${(props) => (props.active ? '1.4' : '1')});
   transition: all 0.3s ease-in-out;
 `;
 export default Carousel;
