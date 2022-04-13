@@ -20,4 +20,5 @@ export const lightTheme = {
   danger: "#dc3545",
   light: "#f8f9fa",
   dark: "#343a40",
+  main: "#ff4c3b",
 };

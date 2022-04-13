@@ -1,7 +1,13 @@
 import React from "react";
-import GlobalCircle from "../../Components/Base/GlobalCircle";
+import Carousel from "../../Components/Carousel/Carousel";
 
 const Home = () => {
-  return <div>Home</div>;
+  return (
+    <>
+      <div>this is navbar</div>
+      <Carousel />
+      <div>Footer</div>
+    </>
+  );
 };
 export default Home;

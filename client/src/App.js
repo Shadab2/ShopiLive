@@ -1,4 +1,3 @@
-import "./App.css";
 import { Home, Product, Auction, DashBoard, Checkout, Error } from "./Pages";
 import { Routes, Route } from "react-router-dom";
 
