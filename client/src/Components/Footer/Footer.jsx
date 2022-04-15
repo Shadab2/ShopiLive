@@ -145,8 +145,8 @@ const Button = styled.li`
   margin-bottom: 10px;
 `;
 const Bottomfooter = styled.div`
-  padding-top: 35px;
-  padding-bottom: 35px;
+  padding-top: 15px;
+  padding-bottom: 15px;
   display: flex;
   justify-content: space-between;
 `;
@@ -257,16 +257,16 @@ const Footer = () => {
 
       <Container>
         <Bottomfooter>
-          <LeftTop>
+          <div>
             <Desc>
               <Icons color="#777" padding="10px">
                 <MdCopyright />
               </Icons>
               2020-21 themeforest powered by pixelstrap
             </Desc>
-          </LeftTop>
+          </div>
 
-          <RightTop>
+          <div>
             <Icons href="#!" padding="15px">
               <img src="./assets/discover.png" alt="" />
             </Icons>
@@ -282,7 +282,7 @@ const Footer = () => {
             <Icons href="#!" padding="15px">
               <img src="./assets/master.png" alt="" />
             </Icons>
-          </RightTop>
+          </div>
         </Bottomfooter>
       </Container>
     </>
