@@ -3,3 +3,28 @@
     padding: 0;
     box-sizing: border-box;
 }
+=======
+.d-flex {
+  display: flex;
+}
+
+.jc {
+  justify-content: center;
+}
+
+.ac {
+  align-items: center;
+}
+
+.mb-10 {
+  margin-bottom: 10px;
+}
+
+.mt-10 {
+  margin-top: 10px;
+}
+
+.mt-20 {
+  margin-top: 20px;
+}
+
