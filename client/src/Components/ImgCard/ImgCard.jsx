@@ -24,7 +24,7 @@ function ImgCard({ data }) {
         </OverLay>
       </ImgWrapper>
       <InfoBox>
-        <div>
+        <div className="d-flex">
           {Array(5)
             .fill(0)
             .map((item, ind) => (

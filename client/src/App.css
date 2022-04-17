@@ -1,9 +1,8 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-=======
 .d-flex {
   display: flex;
 }
@@ -27,4 +26,3 @@
 .mt-20 {
   margin-top: 20px;
 }
-
