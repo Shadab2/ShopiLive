@@ -14,8 +14,8 @@ const Home = () => {
       <Topbar />
       <Navbar />
       <Carousel />
-      <BreadCrumbs />
       <SpecialProducts />
+      <BreadCrumbs />
       <Instagram />
       <Instagramb />
       <Footer />

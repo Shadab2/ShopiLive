@@ -1,7 +1,6 @@
 import React from "react";
-// import "./breadcrumbs.css";
-import { MdOutlineLocalShipping } from "react-icons/md";
 import styled from "styled-components";
+import { lightTheme } from "../../Theme/LightTheme";
 
 const Container = styled.div`
   margin: 50px 104.5px;
@@ -18,7 +17,7 @@ const Media = styled.div`
   justify-content: center;
   border-right: 1px solid #ddd;
   &:hover {
-    color: #ff4c3b;
+    color: ${lightTheme.main};
     transition: 0.3s;
   }
   &:nth-child(3) {
@@ -33,6 +32,7 @@ const Img = styled.img`
   margin-right: 12px;
   height: 60px;
   width: 60px;
+  transition: all 0.3s ease-in-out;
   &:hover {
     transform: scale(1.2);
     transition: 1s;

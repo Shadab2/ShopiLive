@@ -11,12 +11,8 @@ import {
 } from "react-icons/fa";
 import { MdLocationOn, MdCopyright } from "react-icons/md";
 import { VscMail } from "react-icons/vsc";
+import { lightTheme } from "../../Theme/LightTheme";
 
-const Body = styled.body`
-  line-height: 1.5;
-  font-family: "Poppins", sans-serif;
-  color: #777;
-`;
 const Footers = styled.div`
   background-color: #f9f9f9;
   line-height: 1.5;
@@ -81,6 +77,7 @@ const Form = styled.input`
   border: 1px solid #eee;
   height: auto;
   width: 215px;
+  outline: none;
 `;
 
 const Btn = styled.button`
@@ -88,13 +85,14 @@ const Btn = styled.button`
   text-transform: uppercase;
   letter-spacing: 2px;
   width: 150px;
-  background-color: #ff4c3b;
+  background-color: ${lightTheme.main};
   padding: 13px 29px;
   font-weight: 400;
   line-height: 1.5;
   color: #ffffff;
-  border: 1px solid #ff4c3b;
   margin-left: 15px;
+  border: none;
+  cursor: pointer;
 `;
 
 const Row = styled.div`
