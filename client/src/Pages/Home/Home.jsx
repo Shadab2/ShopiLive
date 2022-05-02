@@ -7,6 +7,7 @@ import Topbar from "../../Components/Topbar/Topbar";
 import Instagram from "../../Components/Instagram/Instagram";
 import Instagramb from "../../Components/Instagramb/Instagramb";
 import BreadCrumbs from "../../Components/Breadcrumbs/BreadCrumbs";
+
 const Home = () => {
   return (
     <>

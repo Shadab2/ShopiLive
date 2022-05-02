@@ -1,17 +1,15 @@
-import React from 'react';
-import styled from 'styled-components';
-import { MdPhone } from 'react-icons/md';
-import { FaUser, FaHeart } from 'react-icons/fa';
-import { lightTheme } from '../../Theme/LightTheme';
+import React from "react";
+import styled from "styled-components";
+import { MdPhone } from "react-icons/md";
+import { FaUser, FaHeart } from "react-icons/fa";
+import { lightTheme } from "../../Theme/LightTheme";
 const Wrapper = styled.header`
   display: flex;
   align-items: center;
-  /* justify-content: space-around; */
   justify-content: space-between;
   padding: 1.6rem 7.4rem;
   max-height: 2rem;
   width: 100%;
-  /* gap: 2rem; */
   background-color: #f8f8f8;
 `;
 const FlexWrapper = styled.span`
@@ -21,7 +19,7 @@ const FlexWrapper = styled.span`
   gap: 1rem;
 `;
 const Para = styled.p`
-  font-family: 'Lato', sans-serif;
+  font-family: "Lato", sans-serif;
   color: #999;
   font-size: 0.92rem;
 `;
@@ -48,7 +46,7 @@ const Topbar = () => {
     <Wrapper>
       <FlexWrapper>
         <Para>Welcome to Our store Multikart</Para>
-        <Button href='tel:123-456-7890'>
+        <Button href="tel:123-456-7890">
           <MdPhone style={{ color: `${lightTheme.main}` }} />
           <Para>Call Us: 123 - 456 - 7890</Para>
         </Button>

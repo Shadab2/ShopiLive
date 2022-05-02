@@ -1,6 +1,12 @@
 import React, { useState } from "react";
 import styled from "styled-components";
 import { AiFillStar } from "react-icons/ai";
+import {
+  FaShoppingCart,
+  FaHeart,
+  FaSearch,
+  FaLocationArrow,
+} from "react-icons/fa";
 import { lightTheme } from "../../Theme/LightTheme";
 function ImgCard({ data }) {
   const [index, setIndex] = useState(0);
@@ -9,6 +15,20 @@ function ImgCard({ data }) {
     <CardContainer>
       <ImgWrapper bg={data.image[(index + 1) % data.image.length].source}>
         <MainImage src={data.image[index].source} alt="card" active />
+        <Options>
+          <Icons>
+            <FaShoppingCart />
+          </Icons>
+          <Icons>
+            <FaHeart />
+          </Icons>
+          <Icons>
+            <FaSearch />
+          </Icons>
+          <Icons>
+            <FaLocationArrow />
+          </Icons>
+        </Options>
         <OverLay>
           {data.image.map((item, ind) => {
             return (
@@ -66,6 +86,40 @@ const CardContainer = styled.div`
   justify-content: flex-start;
   overflow: hidden;
 `;
+
+const Options = styled.div`
+  width: 50px;
+  padding: 10px;
+  position: absolute;
+  right: -10px;
+  bottom: 0;
+  &:nth-child(1) {
+    background: blue;
+  }
+`;
+
+const Icons = styled.div`
+  color: ${lightTheme.gray};
+  margin: 10px 0px;
+  transform: translateX(30px);
+  cursor: pointer;
+  opacity: 0;
+  &:hover {
+    color: ${lightTheme.main};
+  }
+  &:nth-child(1) {
+    transition: 0.3s all ease-in-out;
+  }
+  &:nth-child(2) {
+    transition: 0.5s all ease-in-out;
+  }
+  &:nth-child(3) {
+    transition: 0.7s all ease-in-out;
+  }
+  &:nth-child(4) {
+    transition: 1s all ease-in-out;
+  }
+`;
 const Image = styled.img`
   width: 100%;
   height: 100%;
@@ -84,6 +138,10 @@ const ImgWrapper = styled.div`
   &:hover {
     ${MainImage} {
       opacity: 0;
+    }
+    ${Icons} {
+      transform: translateX(0px);
+      opacity: 1;
     }
     &::before {
       opacity: 1;
