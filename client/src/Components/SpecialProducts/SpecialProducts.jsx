@@ -29,7 +29,8 @@ function SpecialProducts() {
 }
 
 const Container = styled.div`
-  padding: 20px 0px;
+  padding: 40px 0px;
+  background-color: ${lightTheme.white};
 `;
 const Title = styled.h1`
   margin: 20px 0px;

@@ -5,6 +5,7 @@ const MContainer = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
+  background-color: white;
 `;
 const Container = styled.div`
   padding: 70px 0px 70px;

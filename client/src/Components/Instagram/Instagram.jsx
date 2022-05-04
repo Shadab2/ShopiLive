@@ -6,6 +6,7 @@ import styled from "styled-components";
 const MContainer = styled.div`
   padding-top: 70px;
   display: flex;
+  background-color: white;
 `;
 const Text = styled.div`
   width: 100%;

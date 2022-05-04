@@ -14,6 +14,7 @@ const Wrapper = styled.nav`
   padding: 2rem 7.4rem;
   max-height: 5rem;
   width: 100%;
+  background-color: ${lightTheme.white};
 `;
 const IconWrapper = styled.span`
   &:hover {
