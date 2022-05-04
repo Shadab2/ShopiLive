@@ -19,9 +19,9 @@ const Footers = styled.div`
 `;
 
 const Container = styled.div`
-  max-width: 1170px;
-  margin: auto;
+  padding: 0px 30px;
   line-height: 1.5;
+  background-color: ${lightTheme.light};
 `;
 
 const TopFooter = styled.div`
@@ -61,8 +61,8 @@ const UlHeading = styled.h4`
 `;
 
 const Desc = styled.p`
-  font-size: 14px;
-  font-weight: 300;
+  font-size: 13px;
+  font-weight: 500;
   line-height: 30px;
   color: #777;
 `;
@@ -122,25 +122,18 @@ const Icons = styled.i`
   line-height: 2.5;
   color: ${(props) => props.color};
 `;
-const ButtonBox = styled.ul`
-  list-style: none;
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-  list-style: none;
-`;
+
 const Button = styled.li`
   display: flex;
-  /* flex-direction: row; */
-  font-size: 14px;
+  font-size: 13px;
   text-transform: capitalize;
   color: #ffffff;
   text-decoration: none;
-  font-weight: 300;
+  font-weight: 500;
   color: #777;
-  /* display: block; */
   transition: all 0.3s ease;
   margin-bottom: 10px;
+  cursor: pointer;
 `;
 const Bottomfooter = styled.div`
   padding-top: 15px;

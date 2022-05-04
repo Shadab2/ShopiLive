@@ -3,10 +3,10 @@ import styled from "styled-components";
 import { lightTheme } from "../../Theme/LightTheme";
 
 const Container = styled.div`
-  margin: 50px 104.5px;
   padding: 0 15px;
   border-top: 1px solid #ddd;
   border-bottom: 1px solid #ddd;
+  background-color: ${lightTheme.white};
 `;
 const Media = styled.div`
   display: flex;

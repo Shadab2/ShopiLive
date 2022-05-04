@@ -85,6 +85,7 @@ const CardContainer = styled.div`
   flex-direction: column;
   justify-content: flex-start;
   overflow: hidden;
+  background-color: ${lightTheme.light};
 `;
 
 const Options = styled.div`
