@@ -7,7 +7,12 @@
 .d-flex {
   display: flex;
 }
-
+.grid {
+  display: grid;
+}
+.grid-5-cols {
+  grid-template-columns: repeat(5, 1fr);
+}
 .jc {
   justify-content: center;
 }
@@ -16,6 +21,9 @@
   align-items: center;
 }
 
+.ml-s {
+  margin-left: 0.8rem;
+}
 .mb-10 {
   margin-bottom: 10px;
 }
