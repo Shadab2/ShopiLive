@@ -45,7 +45,7 @@ const Topbar = () => {
   return (
     <Wrapper>
       <FlexWrapper>
-        <Para>Welcome to Our store Multikart</Para>
+        <Para>Welcome to Our store ShopiLive</Para>
         <Button href="tel:123-456-7890">
           <MdPhone style={{ color: `${lightTheme.main}` }} />
           <Para>Call Us: 123 - 456 - 7890</Para>

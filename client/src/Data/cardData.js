@@ -13,14 +13,14 @@ export const cardData = [
         color: `${lightTheme.red}`,
       },
       {
-        id: 3,
-        source: "/images/media/3.jpg",
-        color: `${lightTheme.white}`,
-      },
-      {
         id: 2,
         source: "/images/media/2.jpg",
         color: `${lightTheme.green}`,
+      },
+      {
+        id: 3,
+        source: "/images/media/3.jpg",
+        color: `${lightTheme.white}`,
       },
     ],
   },
@@ -57,6 +57,11 @@ export const cardData = [
         id: 7,
         source: "/images/media/7.jpeg",
         color: `${lightTheme.dark}`,
+      },
+      {
+        id: 8,
+        source: "/images/media/8.jpeg",
+        color: `${lightTheme.white}`,
       },
       {
         id: 8,

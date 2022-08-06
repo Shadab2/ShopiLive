@@ -4,7 +4,7 @@ import "./App.css";
 
 function App() {
   return (
-    <div className="App">
+    <div className="App overflow-hidden">
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="product" element={<Product />} />

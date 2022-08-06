@@ -139,6 +139,7 @@ const Bottomfooter = styled.div`
   padding-top: 15px;
   padding-bottom: 15px;
   display: flex;
+  align-items: center;
   justify-content: space-between;
 `;
 
@@ -221,7 +222,7 @@ const Footer = () => {
                 <Icons href="#!" padding="22px" color="#777">
                   <MdLocationOn />
                 </Icons>
-                <Desc>Multikart Demo Store, Demo store India 345-659</Desc>
+                <Desc>ShopiLive Demo Store, Demo store India 345-659</Desc>
               </Button>
               <Button href="#!">
                 <Icons href="#!" padding="22px" color="#777">
@@ -249,7 +250,7 @@ const Footer = () => {
       <Container>
         <Bottomfooter>
           <div>
-            <Desc>
+            <Desc className="flex items-center">
               <Icons color="#777" padding="10px">
                 <MdCopyright />
               </Icons>
@@ -257,20 +258,20 @@ const Footer = () => {
             </Desc>
           </div>
 
-          <div>
-            <Icons href="#!" padding="15px">
+          <div className=" flex gap-1">
+            <Icons href="#!">
               <img src="./assets/discover.png" alt="" />
             </Icons>
-            <Icons href="#!" padding="15px">
+            <Icons href="#!">
               <img src="./assets/visa.png" alt="" />
             </Icons>
-            <Icons href="#!" padding="15px">
+            <Icons href="#!">
               <img src="./assets/paypal.png" alt="" />
             </Icons>
-            <Icons href="#!" padding="15px">
+            <Icons href="#!">
               <img src="./assets/express.png" alt="" />
             </Icons>
-            <Icons href="#!" padding="15px">
+            <Icons href="#!">
               <img src="./assets/master.png" alt="" />
             </Icons>
           </div>
