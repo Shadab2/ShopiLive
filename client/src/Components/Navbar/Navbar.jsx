@@ -14,12 +14,14 @@ const Wrapper = styled.nav`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 2rem 7.4rem;
+  padding: 2rem 5.4rem;
   max-height: 5rem;
   width: 100%;
   background-color: ${lightTheme.white};
 `;
 const IconWrapper = styled.span`
+  font-size: 24px;
+  font-weight: 600;
   &:hover {
     cursor: pointer;
   }
@@ -177,7 +179,9 @@ const Navbar = () => {
         <FaBars size={25} />
       </IconWrapper>
 
-      <IconWrapper>SHOPILIVE</IconWrapper>
+      <IconWrapper>
+        SHOPI<span style={{ color: "red" }}>LIVE</span>
+      </IconWrapper>
 
       <ButtonBox>
         <ButtonBoxWrapper style={{ position: "relative" }}>

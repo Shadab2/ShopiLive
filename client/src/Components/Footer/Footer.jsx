@@ -106,8 +106,11 @@ const FooterCol = styled.div`
   flex: ${(props) => props.flexVal};
 `;
 
-const Image = styled.img`
+const Logo = styled.h1`
   margin-bottom: 19px;
+  font-size: 30px;
+  font-weight: bold;
+  letter-spacing: 1px;
 `;
 
 const SocialBox = styled.div`
@@ -153,8 +156,8 @@ const Footer = () => {
               <Heading> KNOW IT ALL FIRST! </Heading>
 
               <Desc>
-                Never Miss Anything From Multikart By Signing Up To Our
-                Newsletter.
+                Never Miss Anything From <strong>Shopi Live </strong>By Signing
+                Up To Our Newsletter.
               </Desc>
             </LeftTop>
 
@@ -169,8 +172,9 @@ const Footer = () => {
 
           <Row>
             <FooterCol margin="60px" flexVal="5">
-              <Image src="./assets/logo.png" alt="" />
-
+              <Logo>
+                Shopi<span style={{ color: "red" }}>Live</span>
+              </Logo>
               <Desc>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
                 eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
