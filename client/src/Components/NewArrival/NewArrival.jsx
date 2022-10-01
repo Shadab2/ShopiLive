@@ -6,7 +6,7 @@ function SpecialProducts({ data }) {
   return (
     <Container>
       {data.map((item, id) => (
-        <ImgCard data={item} key={id} />
+        <ImgCard data={item} key={id} longer />
       ))}
     </Container>
   );

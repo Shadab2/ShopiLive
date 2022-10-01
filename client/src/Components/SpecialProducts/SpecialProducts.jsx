@@ -34,6 +34,8 @@ const Container = styled.div`
 `;
 const Title = styled.h1`
   margin: 20px 0px;
+  font-weight: 500;
+  font-size: 22px;
   letter-spacing: 1px;
   text-transform: uppercase;
   text-align: center;

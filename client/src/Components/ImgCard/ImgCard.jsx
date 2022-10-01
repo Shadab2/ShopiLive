@@ -8,12 +8,16 @@ import {
   FaLocationArrow,
 } from "react-icons/fa";
 import { lightTheme } from "../../Theme/LightTheme";
-function ImgCard({ data }) {
+
+function ImgCard({ data, longer }) {
   const [index, setIndex] = useState(0);
   const changeIndex = (id) => setIndex(id);
   return (
     <CardContainer>
-      <ImgWrapper bg={data.image[(index + 1) % data.image.length].source}>
+      <ImgWrapper
+        bg={data.image[(index + 1) % data.image.length].source}
+        longer={longer}
+      >
         <MainImage src={data.image[index].source} alt="card" active />
         <Options>
           <Icons>
@@ -134,7 +138,7 @@ const MainImage = styled(Image)`
 const ImgWrapper = styled.div`
   position: relative;
   width: 100%;
-  height: 350px;
+  height: ${(props) => (props.longer ? "350px" : "250px")};
   background: ${lightTheme.light};
   &:hover {
     ${MainImage} {
