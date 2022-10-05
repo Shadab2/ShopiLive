@@ -1,0 +1,15 @@
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+.card__image{
+  height: 150px;
+  margin-bottom: 15px;
+  background-size: cover;
+}
+.rating__image{
+  width: 5rem;
+  object-fit: cover;
+}
