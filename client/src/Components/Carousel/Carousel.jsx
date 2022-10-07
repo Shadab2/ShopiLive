@@ -26,11 +26,12 @@ const Data = [
     color: `${lightTheme.blue}`,
   },
 ];
+const LEN = Data.length;
 
 function Carousel() {
   const [index, setIndex] = useState(0);
   const handleSlide = (val) => {
-    setIndex((prev) => (prev + val + Data.length) % Data.length);
+    setIndex((prev) => (prev + val + LEN) % LEN);
   };
 
   useEffect(() => {
@@ -39,14 +40,19 @@ function Carousel() {
     }, 8000);
     return () => clearTimeout(timer);
   }, [index]);
+
   return (
     <Container>
       <Arrow className="arrow" direction="left" onClick={() => handleSlide(-1)}>
         <AiOutlineLeft size={24} />
       </Arrow>
-      <ContentWrapper index={index}>
-        {Data.map((item, idx) => {
-          return (
+      {Data.map((item, idx) => {
+        return (
+          <ContentWrapper
+            active={index === idx}
+            prevSlide={(index - 1 + LEN) % LEN === idx}
+            key={idx}
+          >
             <Content key={idx}>
               <InfoContainer>
                 <SubHeader>Welcome to Fashion</SubHeader>
@@ -57,9 +63,9 @@ function Carousel() {
                 <Image src={item.src} />
               </ImgContainer>
             </Content>
-          );
-        })}
-      </ContentWrapper>
+          </ContentWrapper>
+        );
+      })}
       <Arrow className="arrow" direction="right" onClick={() => handleSlide(1)}>
         <AiOutlineRight size={24} />
       </Arrow>
@@ -89,9 +95,17 @@ const Container = styled.div`
 
 const ContentWrapper = styled.div`
   height: 100%;
-  display: flex;
-  transition: all 0.8s ease;
-  transform: translateX(${(props) => props.index * -100}vw);
+  position: absolute;
+  inset: 0;
+  visibility: ${(props) => (props.active ? "visible" : "hidden")};
+  opacity: ${(props) => (props.active ? 1 : 0)};
+  transform: translateX(
+    ${({ active, prevSlide }) => {
+      if (active) return 0;
+      return prevSlide ? -100 : 100;
+    }}vw
+  );
+  transition: all 0.5s ease-in-out;
 `;
 const Arrow = styled.div`
   width: 50px;

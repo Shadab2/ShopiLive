@@ -37,7 +37,7 @@ function ImgCard({ data, longer }) {
           {data.image.map((item, ind) => {
             return (
               <Image
-                key={item.id}
+                key={ind}
                 src={item.source}
                 alt="card"
                 active={index === ind}
@@ -75,7 +75,7 @@ function ImgCard({ data, longer }) {
         </span>
         <div className="d-flex mt-10">
           {data.image.map(({ color, id }, ind) => (
-            <Balls color={color} key={id} onClick={() => changeIndex(ind)} />
+            <Balls color={color} key={ind} onClick={() => changeIndex(ind)} />
           ))}
         </div>
       </InfoBox>

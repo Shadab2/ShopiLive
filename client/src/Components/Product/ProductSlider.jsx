@@ -8,7 +8,7 @@ function ProductSlider({ sliders, index, handleSlider, setIndex }) {
       <div className="h-[65%] relative">
         {sliders.map((slider, id) => {
           return (
-            <Slider active={index === id}>
+            <Slider active={index === id} key={id}>
               <img src={slider.source} alt="" className="w-full" />
             </Slider>
           );
