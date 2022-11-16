@@ -4,6 +4,9 @@ const app = express();
 const http = require("http");
 const server = http.createServer(app);
 
+app.use(express.static(path.join(__dirname, "/build")));
+app.use(express.json());
+
 const socketio = require("socket.io");
 
 const PORT = process.env.PORT || 8080;
@@ -20,7 +23,7 @@ server.listen(PORT, () => {
 });
 
 app.get("/", (req, res) => {
-  res.send("Hello User");
+  res.sendFile(path.join(__dirname, "build", "index.html"));
 });
 
 var countDownDate = new Date("December 25, 2022 16:37:52").getTime();
