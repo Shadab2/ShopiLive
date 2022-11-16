@@ -1,5 +1,6 @@
 const express = require("express");
 const app = express();
+const path = require("path");
 
 const http = require("http");
 const server = http.createServer(app);
@@ -18,11 +19,7 @@ const io = socketio(server, {
   },
 });
 
-server.listen(PORT, () => {
-  console.log("Up and running on the Port " + PORT);
-});
-
-app.get("/", (req, res) => {
+app.get("*", (req, res) => {
   res.sendFile(path.join(__dirname, "build", "index.html"));
 });
 
@@ -56,4 +53,8 @@ io.on("connection", (socket) => {
   socket.on("disconnect", () => {
     clearInterval(interval);
   });
+});
+
+server.listen(PORT, () => {
+  console.log("Up and running on the Port " + PORT);
 });

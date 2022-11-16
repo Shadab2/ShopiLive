@@ -675,36 +675,6 @@ const Navbar = () => {
             </li>
           </UList>
         </ButtonBoxWrapper>
-        <ButtonBoxWrapper style={{ position: "relative" }}>
-          <Button href="!#!">
-            <Para>BLOGS</Para>
-            <RiArrowDropDownLine size={28} />
-          </Button>
-          <UList className="submenu">
-            <li>
-              <Anchor href="!#">
-                <p>
-                  <span>Blog Left Sidebar</span>
-                </p>
-              </Anchor>
-            </li>
-            <li>
-              <Anchor href="!#">
-                <p>Blog Right Sidebar</p>
-              </Anchor>
-            </li>
-            <li>
-              <Anchor href="!#">
-                <p>No Sidebar</p>
-              </Anchor>
-            </li>
-            <li>
-              <Anchor href="!#">
-                <p>Blog Detail</p>
-              </Anchor>
-            </li>
-          </UList>
-        </ButtonBoxWrapper>
       </ButtonBox>
       <FlexWrapper>
         <IconWrapper>

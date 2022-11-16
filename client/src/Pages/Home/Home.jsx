@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import styled from "styled-components";
 import Navbar from "../../Components/Navbar/Navbar";
 import Carousel from "../../Components/Carousel/Carousel";
@@ -11,6 +11,9 @@ import BreadCrumbs from "../../Components/Breadcrumbs/BreadCrumbs";
 import Parallax from "../../Components/Parallax/Parallax";
 
 const Home = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <Container>
       <Topbar />
