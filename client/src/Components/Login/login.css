@@ -1,0 +1,11 @@
+input {
+    outline: none;
+    display: inline;
+    width: 100%;
+}
+
+
+.btn {
+    margin: 1rem auto;
+    text-align: center;
+}
