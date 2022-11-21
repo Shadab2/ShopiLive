@@ -9,6 +9,7 @@ import { AiOutlineShoppingCart } from "react-icons/ai";
 import { RiArrowDropDownLine } from "react-icons/ri";
 import { BiChevronRight } from "react-icons/bi";
 import { lightTheme } from "../../Theme/LightTheme";
+import { Link } from "react-router-dom";
 
 const Wrapper = styled.nav`
   display: flex;
@@ -49,7 +50,7 @@ const ButtonBoxWrapper = styled.li`
     grid-template-columns: repeat(5, 1fr);
   }
 `;
-const Button = styled.a`
+const Button = styled(Link)`
   font-size: 1rem;
   font-weight: 400;
   line-height: 1.5;
@@ -113,7 +114,7 @@ const UList2 = styled.ul`
   border: 1px solid #eee;
 `;
 
-const Anchor = styled.a`
+const Anchor = styled(Link)`
   text-decoration: none;
   color: #000;
   font-size: 0.875rem;
@@ -185,14 +186,14 @@ const Navbar = () => {
 
       <ButtonBox>
         <ButtonBoxWrapper style={{ position: "relative" }}>
-          <Button href="!#!">
+          <Button to="/">
             <Para>HOME</Para>
             <RiArrowDropDownLine size={28} />
           </Button>
 
           <UList className="submenu">
-            <List style={{ position: "relative" }}>
-              <Anchor href="!#">
+            {/* <List style={{ position: "relative" }}>
+              <Anchor to="/">
                 <p className="d-flex">
                   <span>New Demos</span>
                   <Tag className="ml-s">NEW</Tag>
@@ -200,9 +201,9 @@ const Navbar = () => {
                 <BiChevronRight size={20} />
               </Anchor>
               <UList2 className="submenu-2">{linkNames[0].map(getLink)}</UList2>
-            </List>
+            </List> */}
             <List style={{ position: "relative" }}>
-              <Anchor href="!#">
+              <Anchor to="/">
                 <p>Clothing</p>
                 <BiChevronRight size={20} />
                 <UList2 className="submenu-2">
@@ -210,102 +211,82 @@ const Navbar = () => {
                 </UList2>
               </Anchor>
             </List>
-            <List style={{ position: "relative" }}>
-              <Anchor href="!#">
+            {/* <List style={{ position: "relative" }}>
+              <Anchor to="/">
                 <p>Basics</p>
                 <BiChevronRight size={20} />
                 <UList2 className="submenu-2">
                   {linkNames[2].map(getLink)}
                 </UList2>
               </Anchor>
-            </List>
-            <List>
-              <Anchor href="!#">
-                <p>Beauty</p>
-              </Anchor>
-            </List>
-            <List style={{ position: "relative" }}>
-              <Anchor href="!#">
-                <p>Electronic</p>
-                <BiChevronRight size={20} />
-
-                <UList2 className="submenu-2">
-                  {linkNames[3].map(getLink)}
-                </UList2>
-              </Anchor>
-            </List>
+            </List> */}
             <li>
-              <Anchor href="!#">
-                <p>Furniture</p>
-              </Anchor>
-            </li>
-            <li>
-              <Anchor href="!#">
+              <Anchor to="/">
                 <p>Vegetables</p>
               </Anchor>
             </li>
-            <li>
-              <Anchor href="!#">
+            {/* <li>
+              <Anchor to="/">
                 <p>Watch</p>
               </Anchor>
             </li>
             <li>
-              <Anchor href="!#">
+              <Anchor to="/">
                 <p>Lights</p>
               </Anchor>
             </li>
             <li>
-              <Anchor href="!#">
+              <Anchor to="/">
                 <p>Goggles</p>
               </Anchor>
             </li>
             <li>
-              <Anchor href="!#">
+              <Anchor to="/">
                 <p>Shoes</p>
               </Anchor>
             </li>
             <li>
-              <Anchor href="!#">
+              <Anchor to="/">
                 <p>Bags</p>
               </Anchor>
             </li>
             <li>
-              <Anchor href="!#">
+              <Anchor to="/">
                 <p>Flowers</p>
               </Anchor>
-            </li>
+            </li> */}
           </UList>
         </ButtonBoxWrapper>
         <ButtonBoxWrapper style={{ position: "relative" }}>
-          <Button href="!#!">
+          <Button to="/">
             <Para>SHOP</Para>
             <RiArrowDropDownLine size={28} />
           </Button>
           <UList className="submenu">
             <li>
-              <Anchor href="!#">
+              <Anchor to="/">
                 <p>
                   <span>Left Sidebar</span>
                 </p>
               </Anchor>
             </li>
             <li>
-              <Anchor href="!#">
+              <Anchor to="/">
                 <p>Right Sidebar</p>
               </Anchor>
             </li>
             <li>
-              <Anchor href="!#">
+              <Anchor to="/">
                 <p>No Sidebar</p>
               </Anchor>
             </li>
             <li>
-              <Anchor href="!#">
+              <Anchor to="/">
                 <p>Sidebar Popup</p>
               </Anchor>
             </li>
             <li>
-              <Anchor href="!#">
+              <Anchor to="/">
                 <p className="d-flex">
                   <span>Metro</span>
                   <Tag className="ml-s">NEW</Tag>
@@ -313,7 +294,7 @@ const Navbar = () => {
               </Anchor>
             </li>
             <li>
-              <Anchor href="!#">
+              <Anchor to="/">
                 <p className="d-flex">
                   <span>Full Width</span>
                   <Tag className="ml-s">NEW</Tag>
@@ -321,37 +302,37 @@ const Navbar = () => {
               </Anchor>
             </li>
             <li>
-              <Anchor href="!#">
+              <Anchor to="/">
                 <p>3 Grid</p>
               </Anchor>
             </li>
             <li>
-              <Anchor href="!#">
+              <Anchor to="/">
                 <p>6 Six</p>
               </Anchor>
             </li>
             <li>
-              <Anchor href="!#">
+              <Anchor to="/">
                 <p>List View</p>
               </Anchor>
             </li>
           </UList>
         </ButtonBoxWrapper>
         <ButtonBoxWrapper style={{ position: "relative" }}>
-          <Button href="!#!">
+          <Button to="/">
             <Para>PRODUCTS</Para>
             <RiArrowDropDownLine size={28} />
           </Button>
           <UList className="submenu">
             <List style={{ position: "relative" }}>
-              <Anchor href="!#">
+              <Anchor to="/">
                 <p>Sidebar</p>
                 <BiChevronRight size={20} />
               </Anchor>
               <UList2 className="submenu-2">{linkNames[4].map(getLink)}</UList2>
             </List>
             <List style={{ position: "relative" }}>
-              <Anchor href="!#">
+              <Anchor to="/">
                 <p>Thumbnail Image</p>
                 <BiChevronRight size={20} />
                 <UList2 className="submenu-2">
@@ -360,7 +341,7 @@ const Navbar = () => {
               </Anchor>
             </List>
             <List style={{ position: "relative" }}>
-              <Anchor href="!#">
+              <Anchor to="/">
                 <p>3-Column</p>
                 <BiChevronRight size={20} />
                 <UList2 className="submenu-2">
@@ -369,39 +350,39 @@ const Navbar = () => {
               </Anchor>
             </List>
             <li>
-              <Anchor href="!#">
+              <Anchor to="/">
                 <p>4 Image</p>
               </Anchor>
             </li>
             <li>
-              <Anchor href="!#">
+              <Anchor to="/">
                 <p>Bundle Product</p>
               </Anchor>
             </li>
             <li>
-              <Anchor href="!#">
+              <Anchor to="/">
                 <p>Sticky</p>
               </Anchor>
             </li>
             <li>
-              <Anchor href="!#">
+              <Anchor to="/">
                 <p>Accordian</p>
               </Anchor>
             </li>
             <li>
-              <Anchor href="!#">
+              <Anchor to="/">
                 <p>Image Swatch</p>
               </Anchor>
             </li>
             <li>
-              <Anchor href="!#">
+              <Anchor to="/">
                 <p>Vertical Tab</p>
               </Anchor>
             </li>
           </UList>
         </ButtonBoxWrapper>
         <ButtonBoxWrapper style={{ position: "relative" }}>
-          <Button href="!#">
+          <Button to="/">
             <Para>FEATURES</Para>
             <RiArrowDropDownLine size={28} />
           </Button>
@@ -409,110 +390,110 @@ const Navbar = () => {
             <ul>
               <h4>Portfolio</h4>
               <li>
-                <Anchor href="!#">Portfolio Grid 2</Anchor>
+                <Anchor to="/">Portfolio Grid 2</Anchor>
               </li>
               <li>
-                <Anchor href="!#">Portfolio Grid 3</Anchor>
+                <Anchor to="/">Portfolio Grid 3</Anchor>
               </li>
               <li>
-                <Anchor href="!#">Portfolio Grid 4</Anchor>
+                <Anchor to="/">Portfolio Grid 4</Anchor>
               </li>
               <li>
-                <Anchor href="!#">Masonry Grid 2</Anchor>
+                <Anchor to="/">Masonry Grid 2</Anchor>
               </li>
               <li>
-                <Anchor href="!#">Masonry Grid 3</Anchor>
+                <Anchor to="/">Masonry Grid 3</Anchor>
               </li>
               <li>
-                <Anchor href="!#">Masonry Grid 4</Anchor>
+                <Anchor to="/">Masonry Grid 4</Anchor>
               </li>
               <li>
-                <Anchor href="!#">Masonry Full Width</Anchor>
+                <Anchor to="/">Masonry Full Width</Anchor>
               </li>
             </ul>
             <ul>
               <h4>Add To Cart</h4>
               <li>
-                <Anchor href="!#">Cart Modal Popup</Anchor>
+                <Anchor to="/">Cart Modal Popup</Anchor>
               </li>
               <li>
-                <Anchor href="!#">Qty Counter</Anchor>
+                <Anchor to="/">Qty Counter</Anchor>
               </li>
               <li>
-                <Anchor href="!#">Cart Top</Anchor>
+                <Anchor to="/">Cart Top</Anchor>
               </li>
               <li>
-                <Anchor href="!#">Cart Bottom</Anchor>
+                <Anchor to="/">Cart Bottom</Anchor>
               </li>
               <li>
-                <Anchor href="!#">Cart Left</Anchor>
+                <Anchor to="/">Cart Left</Anchor>
               </li>
               <li>
-                <Anchor href="!#">Cart Right</Anchor>
+                <Anchor to="/">Cart Right</Anchor>
               </li>
             </ul>
             <ul>
               <h4>Theme Element</h4>
               <li>
-                <Anchor href="!#">Title</Anchor>
+                <Anchor to="/">Title</Anchor>
               </li>
               <li>
-                <Anchor href="!#">Collection Banner</Anchor>
+                <Anchor to="/">Collection Banner</Anchor>
               </li>
               <li>
-                <Anchor href="!#">Home Slider</Anchor>
+                <Anchor to="/">Home Slider</Anchor>
               </li>
               <li>
-                <Anchor href="!#">Category</Anchor>
+                <Anchor to="/">Category</Anchor>
               </li>
               <li>
-                <Anchor href="!#">Service</Anchor>
+                <Anchor to="/">Service</Anchor>
               </li>
             </ul>
             <ul>
               <h4>Product Element</h4>
               <li>
-                <Anchor href="!#">Product Box</Anchor>
+                <Anchor to="/">Product Box</Anchor>
               </li>
               <li>
-                <Anchor href="!#">Product Slider</Anchor>
+                <Anchor to="/">Product Slider</Anchor>
               </li>
               <li>
-                <Anchor href="!#">No Slider</Anchor>
+                <Anchor to="/">No Slider</Anchor>
               </li>
               <li>
-                <Anchor href="!#">Multi Slider</Anchor>
+                <Anchor to="/">Multi Slider</Anchor>
               </li>
               <li>
-                <Anchor href="!#">Tab</Anchor>
+                <Anchor to="/">Tab</Anchor>
               </li>
             </ul>
             <ul>
               <h4>Email Template</h4>
               <li>
-                <Anchor href="!#">Order Success</Anchor>
+                <Anchor to="/">Order Success</Anchor>
               </li>
               <li>
-                <Anchor href="!#">Order Success 2</Anchor>
+                <Anchor to="/">Order Success 2</Anchor>
               </li>
               <li>
-                <Anchor href="!#">Email Template</Anchor>
+                <Anchor to="/">Email Template</Anchor>
               </li>
               <li>
-                <Anchor href="!#">Email Template 2</Anchor>
+                <Anchor to="/">Email Template 2</Anchor>
               </li>
             </ul>
           </Box>
         </ButtonBoxWrapper>
 
         <ButtonBoxWrapper style={{ position: "relative" }}>
-          <Button href="!#!">
+          <Button to="/">
             <Para>PAGES</Para>
             <RiArrowDropDownLine size={28} />
           </Button>
           <UList className="submenu">
             <List style={{ position: "relative" }}>
-              <Anchor href="!#">
+              <Anchor to="/">
                 <p className="d-flex">
                   <span>Vendor</span>
                   <Tag className="ml-s">NEW</Tag>
@@ -522,17 +503,17 @@ const Navbar = () => {
               </Anchor>
               <UList2 className="submenu-2">
                 <li>
-                  <Anchor href="!#">
+                  <Anchor to="/">
                     <p>Vendor Dashboard</p>
                   </Anchor>
                 </li>
                 <li>
-                  <Anchor href="!#">
+                  <Anchor to="/">
                     <p>Vendor Profile</p>
                   </Anchor>
                 </li>
                 <li>
-                  <Anchor href="!#">
+                  <Anchor to="/">
                     <p>Become Vendor</p>
                   </Anchor>
                 </li>
@@ -540,57 +521,57 @@ const Navbar = () => {
             </List>
 
             <List style={{ position: "relative" }}>
-              <Anchor href="!#">
+              <Anchor to="/">
                 <p>Account</p>
                 <BiChevronRight size={20} />
                 <UList2 className="submenu-2">
                   <li>
-                    <Anchor href="!#">
+                    <Anchor to="/">
                       <p>Wishlist</p>
                     </Anchor>
                   </li>
                   <li>
-                    <Anchor href="!#">
+                    <Anchor to="/">
                       <p>Cart</p>
                     </Anchor>
                   </li>
                   <li>
-                    <Anchor href="!#">
+                    <Anchor to="/">
                       <p>Dashboard</p>
                     </Anchor>
                   </li>
                   <li>
-                    <Anchor href="!#">
+                    <Anchor to="/">
                       <p>Login</p>
                     </Anchor>
                   </li>
                   <li>
-                    <Anchor href="!#">
+                    <Anchor to="/">
                       <p>Login-Auth</p>
                     </Anchor>
                   </li>
                   <li>
-                    <Anchor href="!#">
+                    <Anchor to="/">
                       <p>Register</p>
                     </Anchor>
                   </li>
                   <li>
-                    <Anchor href="!#">
+                    <Anchor to="/">
                       <p>Contact</p>
                     </Anchor>
                   </li>
                   <li>
-                    <Anchor href="!#">
+                    <Anchor to="/">
                       <p>Forgot-Password</p>
                     </Anchor>
                   </li>
                   <li>
-                    <Anchor href="!#">
+                    <Anchor to="/">
                       <p>Profile</p>
                     </Anchor>
                   </li>
                   <li>
-                    <Anchor href="!#">
+                    <Anchor to="/">
                       <p>Checkout</p>
                     </Anchor>
                   </li>
@@ -598,17 +579,17 @@ const Navbar = () => {
               </Anchor>
             </List>
             <List style={{ position: "relative" }}>
-              <Anchor href="!#">
+              <Anchor to="/">
                 <p>About Us</p>
               </Anchor>
             </List>
             <List>
-              <Anchor href="!#">
+              <Anchor to="/">
                 <p>Search</p>
               </Anchor>
             </List>
             <List style={{ position: "relative" }}>
-              <Anchor href="!#">
+              <Anchor to="/">
                 <p className="d-flex">
                   <span>Typography</span>
                   <Tag className="ml-s">NEW</Tag>
@@ -616,29 +597,29 @@ const Navbar = () => {
               </Anchor>
             </List>
             <li>
-              <Anchor href="!#">
+              <Anchor to="/">
                 <p>Review</p>
               </Anchor>
             </li>
             <li>
-              <Anchor href="!#">
+              <Anchor to="/">
                 <p>Order-Success</p>
               </Anchor>
             </li>
             <List style={{ position: "relative" }}>
-              <Anchor href="!#">
+              <Anchor to="/">
                 <p>Compare</p>
 
                 <BiChevronRight size={20} />
 
                 <UList2 className="submenu-2">
                   <li>
-                    <Anchor href="!#">
+                    <Anchor to="/">
                       <p>Compare</p>
                     </Anchor>
                   </li>
                   <li>
-                    <Anchor href="!#">
+                    <Anchor to="/">
                       <p className="d-flex">
                         <span>Compare-2</span>
                         <Tag className="ml-s">NEW</Tag>
@@ -649,62 +630,62 @@ const Navbar = () => {
               </Anchor>
             </List>
             <li>
-              <Anchor href="!#">
+              <Anchor to="/">
                 <p>Collection</p>
               </Anchor>
             </li>
             <li>
-              <Anchor href="!#">
+              <Anchor to="/">
                 <p>Lookbook</p>
               </Anchor>
             </li>
             <li>
-              <Anchor href="!#">
+              <Anchor to="/">
                 <p>Site-Map</p>
               </Anchor>
             </li>
             <li>
-              <Anchor href="!#">
+              <Anchor to="/">
                 <p>404</p>
               </Anchor>
             </li>
             <li>
-              <Anchor href="!#">
+              <Anchor to="/">
                 <p>Coming-Soon</p>
               </Anchor>
             </li>
           </UList>
         </ButtonBoxWrapper>
-        <ButtonBoxWrapper style={{ position: "relative" }}>
-          <Button href="!#!">
+        {/* <ButtonBoxWrapper style={{ position: "relative" }}>
+          <Button to="/user/login">
             <Para>BLOGS</Para>
             <RiArrowDropDownLine size={28} />
           </Button>
           <UList className="submenu">
             <li>
-              <Anchor href="!#">
+              <Anchor to="/">
                 <p>
                   <span>Blog Left Sidebar</span>
                 </p>
               </Anchor>
             </li>
             <li>
-              <Anchor href="!#">
+              <Anchor to="/">
                 <p>Blog Right Sidebar</p>
               </Anchor>
             </li>
             <li>
-              <Anchor href="!#">
+              <Anchor to="/">
                 <p>No Sidebar</p>
               </Anchor>
             </li>
             <li>
-              <Anchor href="!#">
+              <Anchor to="/">
                 <p>Blog Detail</p>
               </Anchor>
             </li>
           </UList>
-        </ButtonBoxWrapper>
+        </ButtonBoxWrapper> */}
       </ButtonBox>
       <FlexWrapper>
         <IconWrapper>

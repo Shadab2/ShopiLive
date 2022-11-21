@@ -3,6 +3,7 @@ import styled from "styled-components";
 import { MdPhone } from "react-icons/md";
 import { FaUser, FaHeart } from "react-icons/fa";
 import { lightTheme } from "../../Theme/LightTheme";
+import { Link } from "react-router-dom";
 const Wrapper = styled.header`
   display: flex;
   align-items: center;
@@ -41,6 +42,40 @@ const Button = styled.a`
   }
 `;
 
+const AccntButton = styled.a`
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  padding: 1rem 0.5rem;
+  color: #999;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: all 0.2s;
+  cursor: pointer;
+  &:hover .activecolor {
+    color: ${lightTheme.main};
+  }
+  &: hover .activestate{
+    visibility: visible;
+    transform:translateY(0rem);
+  }
+`;
+
+const LoginContainer = styled.div`
+    position:absolute;
+    background-color: #fff;
+    padding : 0.8rem;
+    width: 8.4rem;
+    top: 3.2rem;
+    color: #999;
+    box-shadow: 0 0 1px 0 #ebebeb;
+    visibility:hidden;
+    transition : all 0.3s linear;
+    transform:translateY(4rem);
+`;
+
 const Topbar = () => {
   return (
     <Wrapper>
@@ -56,11 +91,20 @@ const Topbar = () => {
           <FaHeart size={14} />
           <Para>Wishlist</Para>
         </Button>
-        <Button>
-          <FaUser size={14} />
+        <AccntButton >
+          <FaUser className="activecolor" size={14} />
           <Para>My Account</Para>
-        </Button>
+          <LoginContainer className="activestate">
+            <div>
+              <Link to="/user/login">Login</Link>
+            </div>
+            <div>
+              <Link to="/user/register">Register</Link>
+            </div>
+          </LoginContainer>
+        </AccntButton>
       </FlexWrapper>
+
     </Wrapper>
   );
 };

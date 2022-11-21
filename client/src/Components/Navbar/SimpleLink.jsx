@@ -1,7 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
+import { Link } from "react-router-dom";
 
-const Anchor = styled.a`
+const Anchor = styled(Link)`
   text-decoration: none;
   color: #000;
   font-size: 0.875rem;
@@ -28,7 +29,7 @@ const Anchor = styled.a`
 const SimpleLink = (prop) => {
   return (
     <li>
-      <Anchor href='!#'>
+      <Anchor to="/">
         <p>{prop.text}</p>
       </Anchor>
     </li>
